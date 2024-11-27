@@ -36,9 +36,16 @@ pipeline {
                script {
 		        withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token') { 
                         sh "mvn sonar:sonar"
-		          } 
+		       } 
 	           }	
-           }
-       }
+               }
+          }
+        stage("Quality Gates"){
+		stpes{
+		   scripts {
+		       waitForQualityGate abortPipeline: false, credentialsId: 'jenkins-sonarqube-token'
+		      }
+		 }
+	   }    
     }  
 } 
