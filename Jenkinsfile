@@ -1,3 +1,4 @@
+
 pipeline {
     agent { label 'Jenkin-Agent' }
     tools {
@@ -28,6 +29,15 @@ pipeline {
        stage("Test Application"){
            steps {
                  sh "mvn test"
+           }
+       }
+       stages("SonarQube Analysis"){
+           steps{
+               script {
+		        withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token') { 
+                        sh "mvn sonar:sonar"
+		          } 
+	           }	
            }
        }
     }  
