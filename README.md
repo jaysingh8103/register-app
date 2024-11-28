@@ -1,13 +1,11 @@
-
---------------------------------------------------------DEPLOY OF KUBERNETES USING JENKINS CI/CD PIPELINE-------------------------------------------------------------------------
+-----------------------DEPLOY OF KUBERNETES USING JENKINS CI/CD PIPELINE---------------------------
 
 ![Screenshot 2024-11-28 102228](https://github.com/user-attachments/assets/7b41aa2c-8da9-4be7-b8fb-b76a3ede53a1)
 
 
-=================================================================AWS EC2 SERVECE ==================================================================================================
+=========================AWS EC2 SERVECE =================================
 ![Screenshot 2024-11-28 102514](https://github.com/user-attachments/assets/115e93af-2100-46c1-a95f-2a62db663cf1)
-
-============================================================= Install and Configure the Jenkins-Master & Jenkins-Agent =============================================================
+================================ Install and Configure the Jenkins-Master & Jenkins-Agent ======================
 ## Install Java
 $ sudo apt update
 $ sudo apt upgrade
@@ -34,7 +32,7 @@ $ sudo service sshd reload
 $ ssh-keygen OR $ ssh-keygen -t ed25519
 $ cd .ssh
 
-============================================================= Install and Configure the SonarQube =============================================================
+================================ Install and Configure the SonarQube ==================================
 ## Update Package Repository and Upgrade Packages
     $ sudo apt update
     $ sudo apt upgrade
@@ -124,7 +122,7 @@ $ sudo vim /etc/systemd/system/sonar.service
 ## Watch log files and monitor for startup
      $ sudo tail -f /opt/sonarqube/logs/sonar.log
 
-============================================================= Setup Bootstrap Server for eksctl and Setup Kubernetes using eksctl =============================================================
+============================ Setup Bootstrap Server for eksctl and Setup Kubernetes using eksctl ===============================
 ## Install AWS Cli on the above EC2
 Refer--https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 $ sudo su
@@ -162,7 +160,7 @@ $ eksctl create cluster --name virtualtechbox-cluster \
 
 $ kubectl get nodes
 
-============================================================= ArgoCD Installation on EKS Cluster and Add EKS Cluster to ArgoCD =============================================================
+========================= ArgoCD Installation on EKS Cluster and Add EKS Cluster to ArgoCD ===============================
 1 ) First, create a namespace
     $ kubectl create namespace argocd
 
