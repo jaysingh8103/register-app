@@ -1,3 +1,12 @@
+
+--------------------------------------------------------DEPLOY OF KUBERNETES USING JENKINS CI/CD PIPELINE-------------------------------------------------------------------------
+
+![Screenshot 2024-11-28 102228](https://github.com/user-attachments/assets/7b41aa2c-8da9-4be7-b8fb-b76a3ede53a1)
+
+
+=================================================================AWS EC2 SERVECE ==================================================================================================
+![Screenshot 2024-11-28 102514](https://github.com/user-attachments/assets/115e93af-2100-46c1-a95f-2a62db663cf1)
+
 ============================================================= Install and Configure the Jenkins-Master & Jenkins-Agent =============================================================
 ## Install Java
 $ sudo apt update
